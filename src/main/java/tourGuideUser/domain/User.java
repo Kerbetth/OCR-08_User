@@ -1,19 +1,15 @@
 package tourGuideUser.domain;
 
+import tourGuideUser.client.dto.TrackerService.VisitedLocation;
+import tourGuideUser.client.dto.UserRewardPricer.Provider;
+
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-import lombok.Getter;
-import lombok.Setter;
-import tourGuideUser.client.dto.TrackerService.VisitedLocation;
-import tourGuideUser.client.dto.UserRewardPricer.Provider;
 
-import javax.validation.constraints.NotNull;
-
-@Getter
-@Setter
 public class User {
 
 	private final UUID userId;

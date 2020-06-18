@@ -1,17 +1,10 @@
 package tourGuideUser;
 
 
-import org.apache.commons.lang3.time.StopWatch;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.springframework.boot.test.context.SpringBootTest;
 import tourGuideUser.service.UserService;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import static org.junit.Assert.assertTrue;
 
 @SpringBootTest
 public class TestPerformance {

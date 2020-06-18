@@ -3,8 +3,6 @@ package tourGuideUser.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-
-import tourGuideUser.client.dto.TrackerService.VisitedLocation;
 import tourGuideUser.domain.User;
 import tourGuideUser.domain.UserPreferences;
 import tourGuideUser.service.UserService;
@@ -21,7 +19,7 @@ public class UserController {
      */
 
     @PostMapping("/createUser")
-    public void createUser(@RequestParam User user) {
+    public void createUser(@RequestBody User user) {
         userService.saveUser(user);
     }
 
@@ -36,8 +34,12 @@ public class UserController {
     }
 
     @GetMapping("/getAllUsers")
-    public List<User> getAllUsers(String username) {
+    public List<User> getAllUsers() {
         return userService.collectAllUsers();
     }
 
+    @GetMapping("/getAllCurrentLocation")
+    public List<User> getAllUsers() {
+        return userService.collectAllUsers();
+    }
 }
