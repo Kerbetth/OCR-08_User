@@ -1,6 +1,4 @@
-package tourGuideUser.client.dto.TrackerService;
-
-import tourGuideUser.client.dto.TrackerService.location.Location;
+package tourGuideUser.domain;
 
 import java.util.Date;
 import java.util.UUID;

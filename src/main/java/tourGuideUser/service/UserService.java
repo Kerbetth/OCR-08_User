@@ -6,36 +6,41 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tourGuideUser.domain.User;
 import tourGuideUser.domain.UserPreferences;
-import tourGuideUser.repository.UserData;
+import tourGuideUser.util.UserUtil;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 @Slf4j
 @Service
 public class UserService {
 
     @Autowired
-    UserData userData;
+    UserUtil userUtil;
 
-
-    public void saveUser(User user) {
-        userData.addANewUser(user);
-    }
 
     public void setUserPreferences(String userName,
                                    UserPreferences userPreferences) {
         User user = findUserbyName(userName);
         user.setUserPreferences(userPreferences);
-        saveUser(user);
+        Map<String, User> userMap = userUtil.getInternalUserMap();
+        userMap.put(userName, user);
+        userUtil.setInternalUserMap(userMap);
     }
 
     public User findUserbyName(String userName) {
-
-        return userData.findUserbyName(userName);
+        return userUtil.getInternalUserMap().get(userName);
     }
 
-    public List<User> collectAllUsers() {
 
-        return userData.collectAllUsers();
+    public List<UUID> getAllUsersID() {
+        List<UUID> userId = new ArrayList<>();
+        List<User> users = new ArrayList<>(userUtil.getInternalUserMap().values());
+        for (User user : users) {
+            userId.add(user.getUserId());
+        }
+        return userId;
     }
 }

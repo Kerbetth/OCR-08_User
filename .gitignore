@@ -32,3 +32,8 @@ build/
 
 ### VS Code ###
 .vscode/
+/.gradle/
+/.idea/
+/.settings/
+/build/
+/gradle/

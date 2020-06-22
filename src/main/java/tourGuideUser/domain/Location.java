@@ -1,4 +1,4 @@
-package tourGuideUser.client.dto.TrackerService.location;
+package tourGuideUser.domain;
 
 public class Location {
     public final double longitude;
