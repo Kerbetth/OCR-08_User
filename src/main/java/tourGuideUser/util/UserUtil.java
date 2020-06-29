@@ -2,9 +2,9 @@ package tourGuideUser.util;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
-import tourGuideUser.domain.Location;
-import tourGuideUser.domain.User;
-import tourGuideUser.domain.VisitedLocation;
+import tourGuideUser.domain.trackerservice.Location;
+import tourGuideUser.domain.trackerservice.VisitedLocation;
+import tourGuideUser.domain.userservice.User;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
@@ -30,8 +30,8 @@ public class UserUtil {
             String userName = "internalUser" + i;
             String phone = "000";
             String email = userName + "@tourGuide.com";
-            User user = new User(UUID.randomUUID(), userName, phone, email);
-            generateUserLocationHistory(user);
+            User user = new User(UUID.randomUUID(), userName);
+            user = generateUserLocationHistory(user);
             internalUserMap.put(userName, user);
         });
 
@@ -45,14 +45,17 @@ public class UserUtil {
         this.internalUserMap = internalUserMap;
     }
 
-    private void generateUserLocationHistory(User user) {
+    private User generateUserLocationHistory(User user) {
+        List<VisitedLocation> visitedLocations = new ArrayList<>();
         IntStream.range(0, 3).forEach(i -> {
-            user.addToVisitedLocations(
+            visitedLocations.add(
                     new VisitedLocation(user.getUserId(),
                             new Location(generateRandomLatitude(),
                                     generateRandomLongitude()),
                             getRandomTime()));
         });
+        user.setVisitedLocations(visitedLocations);
+        return user;
     }
 
     private double generateRandomLongitude() {

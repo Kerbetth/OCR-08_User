@@ -1,4 +1,4 @@
-package tourGuideUser.domain;
+package tourGuideUser.domain.trackerservice;
 
 import java.util.UUID;
 

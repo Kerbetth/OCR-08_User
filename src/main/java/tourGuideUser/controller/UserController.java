@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import tourGuideUser.domain.User;
-import tourGuideUser.domain.UserPreferences;
+import tourGuideUser.domain.userservice.User;
+import tourGuideUser.domain.userservice.UserPreferences;
 import tourGuideUser.service.UserService;
 
 import java.util.List;
@@ -27,8 +27,8 @@ public class UserController {
     }
 
     @GetMapping("/getUser")
-    public User getUser(String username) {
-        return userService.findUserbyName(username);
+    public User getUser(@RequestParam String userName) {
+        return userService.findUserbyName(userName);
     }
 
 
@@ -36,5 +36,4 @@ public class UserController {
     public List<UUID> getAllUsersID() {
         return userService.getAllUsersID() ;
     }
-
 }

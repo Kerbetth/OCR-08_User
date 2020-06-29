@@ -4,8 +4,8 @@ package tourGuideUser.service;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import tourGuideUser.domain.User;
-import tourGuideUser.domain.UserPreferences;
+import tourGuideUser.domain.userservice.User;
+import tourGuideUser.domain.userservice.UserPreferences;
 import tourGuideUser.util.UserUtil;
 
 import java.util.ArrayList;
@@ -34,6 +34,14 @@ public class UserService {
         return userUtil.getInternalUserMap().get(userName);
     }
 
+    public List<UUID> getAllVisitedLocation() {
+        List<UUID> userId = new ArrayList<>();
+        List<User> users = new ArrayList<>(userUtil.getInternalUserMap().values());
+        for (User user : users) {
+            userId.add(user.getUserId());
+        }
+        return userId;
+    }
 
     public List<UUID> getAllUsersID() {
         List<UUID> userId = new ArrayList<>();

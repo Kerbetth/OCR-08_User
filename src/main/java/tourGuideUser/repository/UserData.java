@@ -2,10 +2,10 @@ package tourGuideUser.repository;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
-import tourGuideUser.domain.Location;
-import tourGuideUser.domain.User;
-import tourGuideUser.domain.UserPreferences;
-import tourGuideUser.domain.VisitedLocation;
+import tourGuideUser.domain.trackerservice.Location;
+import tourGuideUser.domain.trackerservice.VisitedLocation;
+import tourGuideUser.domain.userservice.User;
+import tourGuideUser.domain.userservice.UserPreferences;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
@@ -31,14 +31,14 @@ public class UserData {
     }
 
     public User findUserbyName(String userName){
-        User user = new User(UUID.randomUUID(), userName, "phone", "email");
+        User user = new User(UUID.randomUUID(), userName);
         user.setUserPreferences(new UserPreferences());
         generateUserLocationHistory(user);
         return user;
     }
 
     public List<User> collectAllUsers(){
-        User user = new User(UUID.randomUUID(), "userName", "phone", "email");
+        User user = new User(UUID.randomUUID(), "userName");
         user.setUserPreferences(new UserPreferences());
         generateUserLocationHistory(user);
         ArrayList<User> users = new ArrayList<>();
@@ -47,14 +47,17 @@ public class UserData {
         return users;
     }
 
-    private void generateUserLocationHistory(User user) {
+    private User generateUserLocationHistory(User user) {
+        List<VisitedLocation> visitedLocations = new ArrayList<>();
         IntStream.range(0, 3).forEach(i -> {
-            user.addToVisitedLocations(
+            visitedLocations.add(
                     new VisitedLocation(user.getUserId(),
                             new Location(generateRandomLatitude(),
                                     generateRandomLongitude()),
                             getRandomTime()));
         });
+        user.setVisitedLocations(visitedLocations);
+        return user;
     }
 
     private double generateRandomLongitude() {
