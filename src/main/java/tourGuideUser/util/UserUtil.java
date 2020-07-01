@@ -54,6 +54,9 @@ public class UserUtil {
                                     generateRandomLongitude()),
                             getRandomTime()));
         });
+        visitedLocations.add(new VisitedLocation(user.getUserId(),
+                new Location(33.817595D, -117.922008D),
+                getRandomTime()));
         user.setVisitedLocations(visitedLocations);
         return user;
     }

@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import tourGuideUser.domain.trackerservice.Location;
+import tourGuideUser.domain.trackerservice.VisitedLocation;
 import tourGuideUser.domain.userservice.User;
 import tourGuideUser.domain.userservice.UserPreferences;
 import tourGuideUser.service.UserService;
@@ -31,7 +32,10 @@ public class UserController {
     public User getUser(@RequestParam String userName) {
         return userService.findUserbyName(userName);
     }
-
+    @GetMapping("/getUserId")
+    public UUID getUserId(@RequestParam String userName) {
+        return userService.findUserbyName(userName).getUserId();
+    }
     @GetMapping("/getUserLocation")
     public Location getUserLocation(@RequestParam String userName) {
         return userService.getLocation(userName);
@@ -41,5 +45,10 @@ public class UserController {
     @GetMapping("/getAllUsersID")
     public List<UUID> getAllUsersID() {
         return userService.getAllUsersID() ;
+    }
+
+    @GetMapping("/getAllVisitedLocations")
+    public List<VisitedLocation> getgetAllVisitedLocations(String userName) {
+        return userService.getAllVisitedLocation(userName);
     }
 }
