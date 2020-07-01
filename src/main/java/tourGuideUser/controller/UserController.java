@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import tourGuideUser.domain.trackerservice.Location;
 import tourGuideUser.domain.userservice.User;
 import tourGuideUser.domain.userservice.UserPreferences;
 import tourGuideUser.service.UserService;
@@ -29,6 +30,11 @@ public class UserController {
     @GetMapping("/getUser")
     public User getUser(@RequestParam String userName) {
         return userService.findUserbyName(userName);
+    }
+
+    @GetMapping("/getUserLocation")
+    public Location getUserLocation(@RequestParam String userName) {
+        return userService.getLocation(userName);
     }
 
 
