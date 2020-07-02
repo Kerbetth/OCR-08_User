@@ -4,10 +4,12 @@ package tourGuideUser.service;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tourGuideUser.domain.pricerreward.TripPricerTask;
 import tourGuideUser.domain.trackerservice.Location;
 import tourGuideUser.domain.trackerservice.VisitedLocation;
 import tourGuideUser.domain.userservice.User;
 import tourGuideUser.domain.userservice.UserPreferences;
+import tourGuideUser.domain.userservice.UserReward;
 import tourGuideUser.util.UserUtil;
 
 import java.util.ArrayList;
@@ -52,5 +54,22 @@ public class UserService {
             userId.add(user.getUserId());
         }
         return userId;
+    }
+
+    public TripPricerTask getTripPricerTask(String userName) {
+        UserPreferences userPreferences = findUserbyName(userName).getUserPreferences();
+        return new TripPricerTask(
+                "randomAPIKey",
+                userPreferences.getNumberOfAdults(),
+                userPreferences.getNumberOfChildren(),
+                userPreferences.getTripDuration());
+    }
+
+    public int getUserRewards(String userName) {
+        int rewards =0;
+        for(UserReward userReward : findUserbyName(userName).getUserRewards()){
+            rewards += userReward.getRewardPoints();
+        }
+        return rewards;
     }
 }
