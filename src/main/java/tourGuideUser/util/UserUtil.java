@@ -30,7 +30,7 @@ public class UserUtil {
             String userName = "internalUser" + i;
             String phone = "000";
             String email = userName + "@tourGuide.com";
-            User user = new User(UUID.randomUUID(), userName);
+            User user = new User(UUID.randomUUID(), userName, phone, email);
             user = generateUserLocationHistory(user);
             internalUserMap.put(userName, user);
         });

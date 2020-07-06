@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c825401c-5b50-4219-afe9-ff0a376bc460" name="Default Changelist" comment="mise en place des getUser, getAllUserID, et setUserpreferences">
+      <change afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.3/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.3/fileContent/fileContent.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.3/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/vcsWorkingDirs/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.buildship.core.prefs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/client/dto/TrackerService/FiveNearestAttractions.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/client/dto/TrackerService/UserLocation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/client/dto/TrackerService/VisitedLocation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/client/dto/TrackerService/location/Attraction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/client/dto/TrackerService/location/Location.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/client/dto/UserRewardPricer/Provider.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/client/dto/UserRewardPricer/TripPricer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/client/dto/UserRewardPricer/TripPricerTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/controller/UserController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/repository/UserData.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/service/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/branchfc.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/branchnc.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/branchpc.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/bundle.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/class.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/down.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/greenbar.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/group.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/method.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/package.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/prettify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/prettify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/redbar.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/report.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/report.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/session.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/sort.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/sort.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/source.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/up.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-sessions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.domain/FiveNearestAttractions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.domain/FiveNearestAttractions.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.domain/UserLocation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.domain/UserLocation.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.domain/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.domain/index.source.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.helper/InternalTestHelper.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.helper/InternalTestHelper.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.helper/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.helper/index.source.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/RewardsService.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/RewardsService.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/TourGuideService$1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/TourGuideService.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/TourGuideService.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/index.source.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.tracker/Tracker.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.tracker/Tracker.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.tracker/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.tracker/index.source.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/User.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/User.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/UserPreferences.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/UserPreferences.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/UserReward.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/UserReward.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/index.source.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/Application.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/Application.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/TourGuideController.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/TourGuideController.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/TourGuideModule.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/TourGuideModule.java.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/index.source.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/jacocoTestReport.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.4.jar_982888894296538c98d7324f3ca78d8f/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.4.jar_982888894296538c98d7324f3ca78d8f/META-INF/maven/org.jacoco/org.jacoco.agent/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.4.jar_982888894296538c98d7324f3ca78d8f/META-INF/maven/org.jacoco/org.jacoco.agent/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.4.jar_982888894296538c98d7324f3ca78d8f/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.4.jar_982888894296538c98d7324f3ca78d8f/jacocoagent.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.4.jar_982888894296538c98d7324f3ca78d8f/org/jacoco/agent/AgentJar.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tourGuideUser/domain/CreateUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tourGuideUser/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tourGuideUser/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tourGuideUser/domain/userservice/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tourGuideUser/domain/userservice/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tourGuideUser/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tourGuideUser/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tourGuideUser/util/UserUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tourGuideUser/util/UserUtil.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1d8d1h3M7UgD5KmEz5HRwERqAtJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tourGuideUser.domain.userservice" />
+      <recent name="tourGuideUser.domain.pricerreward" />
+      <recent name="tourGuideUser.domain" />
+      <recent name="tourGuideUser.client" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dufeu\eclipse-workspace\OCR-08\TourGuide_User\TourGuide_User\src\main\java\tourGuideUser" />
+      <recent name="C:\Users\dufeu\eclipse-workspace\OCR-08\TourGuide_User\TourGuide_User\src\main\java\tourGuideUser\domain" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.Tests in 'TourGuide_User.tourGuideUser'">
+    <configuration name="Tests in 'TourGuide_User.tourGuideUser'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests *" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Application (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="TourGuide_User.tourGuideUser.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tourGuideUser.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="tourGuideReward.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tourGuideTracker.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="tourGuideUser.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tourGuideUser.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tourGuideUser.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Tests in 'TourGuide_User.tourGuideUser'" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c825401c-5b50-4219-afe9-ff0a376bc460" name="Default Changelist" comment="" />
+      <created>1591810440826</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591810440826</updated>
+      <workItem from="1591810443664" duration="2409000" />
+      <workItem from="1591894557348" duration="8141000" />
+      <workItem from="1591943294524" duration="2543000" />
+      <workItem from="1591949680233" duration="6806000" />
+      <workItem from="1592240214953" duration="609000" />
+      <workItem from="1592399191669" duration="4385000" />
+      <workItem from="1592462785377" duration="2892000" />
+      <workItem from="1592488175767" duration="7202000" />
+      <workItem from="1592762547646" duration="3509000" />
+      <workItem from="1592808008650" duration="7225000" />
+      <workItem from="1592850089884" duration="7000" />
+      <workItem from="1592927766069" duration="625000" />
+      <workItem from="1593255325564" duration="6260000" />
+      <workItem from="1593442327951" duration="1861000" />
+      <workItem from="1593449838690" duration="3349000" />
+      <workItem from="1593586439312" duration="8837000" />
+      <workItem from="1593673066303" duration="5576000" />
+      <workItem from="1593782553622" duration="8294000" />
+      <workItem from="1593933148833" duration="4602000" />
+    </task>
+    <task id="LOCAL-00001" summary="mise en place des relations avec le MS TrackerClient">
+      <created>1592496583503</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1592496583503</updated>
+    </task>
+    <task id="LOCAL-00002" summary="mise en place des relations avec le MS TrackerClient">
+      <created>1592820791941</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1592820791941</updated>
+    </task>
+    <task id="LOCAL-00003" summary="mise en place des getUser, getAllUserID, et setUserpreferences">
+      <created>1593449944546</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1593449944546</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Ajout du controller getUserLocation">
+      <created>1593619519293</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1593619519293</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ajout du controller getAttractionReward">
+      <created>1593629562092</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1593629562092</updated>
+    </task>
+    <task id="LOCAL-00006" summary="mise en place du controller getRewards">
+      <created>1593680215076</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1593680215076</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="mise en place des relations avec le MS TrackerClient" />
+    <MESSAGE value="mise en place des getUser, getAllUserID, et setUserpreferences" />
+    <MESSAGE value="Ajout du controller getUserLocation" />
+    <MESSAGE value="ajout du controller getAttractionReward" />
+    <MESSAGE value="mise en place du controller getRewards" />
+    <option name="LAST_COMMIT_MESSAGE" value="mise en place du controller getRewards" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="210" key="#com.intellij.ide.util.MemberChooser" timestamp="1592512988868">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="765" y="210" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1592512988868" />
+    <state x="479" y="451" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1591811349667">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="479" y="451" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1591811349667" />
+    <state x="756" y="385" width="446" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1593673768294">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="756" y="385" width="446" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1050@0.0.1920.1050" timestamp="1593673768294" />
+    <state x="785" y="389" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1592762907561">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="785" y="389" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1592762907561" />
+    <state x="376" y="53" key="CommitChangelistDialog2" timestamp="1593680213751">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="376" y="53" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1593680213751" />
+    <state x="740" y="281" key="FileChooserDialogImpl" timestamp="1593683183125">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="281" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1593683183125" />
+    <state width="1877" height="296" key="GridCell.Tab.0.bottom" timestamp="1593683761655">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="296" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1593683761655" />
+    <state width="1877" height="296" key="GridCell.Tab.0.center" timestamp="1593683761655">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="296" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1593683761655" />
+    <state width="1877" height="296" key="GridCell.Tab.0.left" timestamp="1593683761654">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="296" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1593683761654" />
+    <state width="1877" height="296" key="GridCell.Tab.0.right" timestamp="1593683761655">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="296" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1593683761655" />
+    <state width="1877" height="296" key="GridCell.Tab.1.bottom" timestamp="1593683761655">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="296" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1593683761655" />
+    <state width="1877" height="296" key="GridCell.Tab.1.center" timestamp="1593683761655">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="296" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1593683761655" />
+    <state width="1877" height="296" key="GridCell.Tab.1.left" timestamp="1593683761655">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="296" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1593683761655" />
+    <state width="1877" height="296" key="GridCell.Tab.1.right" timestamp="1593683761655">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="296" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1593683761655" />
+    <state width="1877" height="352" key="GridCell.Tab.2.bottom" timestamp="1591907473838">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.2.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1591907473838" />
+    <state width="1877" height="352" key="GridCell.Tab.2.center" timestamp="1591907473838">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.2.center/0.0.1920.1050@0.0.1920.1050" timestamp="1591907473838" />
+    <state width="1877" height="352" key="GridCell.Tab.2.left" timestamp="1591907473838">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.2.left/0.0.1920.1050@0.0.1920.1050" timestamp="1591907473838" />
+    <state width="1877" height="352" key="GridCell.Tab.2.right" timestamp="1591907473838">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="352" key="GridCell.Tab.2.right/0.0.1920.1050@0.0.1920.1050" timestamp="1591907473838" />
+    <state x="461" y="168" key="SettingsEditor" timestamp="1591895094096">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="168" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1591895094096" />
+    <state x="552" y="247" key="Vcs.Push.Dialog.v2" timestamp="1593680220487">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="247" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1593680220487" />
+    <state x="656" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1594019689758">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="656" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1594019689758" />
+    <state x="656" y="257" width="607" height="536" key="find.popup" timestamp="1593263248321">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="656" y="257" width="607" height="536" key="find.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1593263248321" />
+    <state x="616" y="243" width="672" height="677" key="run.anything.popup" timestamp="1593620694051">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="616" y="243" width="672" height="677" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1593620694051" />
+  </component>
+</project>

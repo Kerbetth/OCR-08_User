@@ -41,7 +41,12 @@ public class User {
 		this.userPreferences = userPreferences;
 		this.tripDeals = tripDeals;
 	}
-	
 
 
+	public User(UUID userId, String userName, String phoneNumber, String emailAddress) {
+		this.userId = userId;
+		this.userName = userName;
+		this.phoneNumber = phoneNumber;
+		this.emailAddress = emailAddress;
+	}
 }

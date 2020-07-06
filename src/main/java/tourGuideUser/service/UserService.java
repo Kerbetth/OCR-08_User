@@ -4,6 +4,7 @@ package tourGuideUser.service;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tourGuideUser.domain.CreateUser;
 import tourGuideUser.domain.pricerreward.TripPricerTask;
 import tourGuideUser.domain.trackerservice.Location;
 import tourGuideUser.domain.trackerservice.VisitedLocation;
@@ -12,10 +13,7 @@ import tourGuideUser.domain.userservice.UserPreferences;
 import tourGuideUser.domain.userservice.UserReward;
 import tourGuideUser.util.UserUtil;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 @Slf4j
 @Service
@@ -27,24 +25,56 @@ public class UserService {
 
     public void setUserPreferences(String userName,
                                    UserPreferences userPreferences) {
-        User user = findUserbyName(userName);
+        User user = findUserByName(userName);
         user.setUserPreferences(userPreferences);
         Map<String, User> userMap = userUtil.getInternalUserMap();
         userMap.put(userName, user);
         userUtil.setInternalUserMap(userMap);
     }
 
-    public User findUserbyName(String userName) {
+    public void addUser(CreateUser createUser) {
+        User user =new User(
+                UUID.randomUUID(),
+                createUser.getUserName(),
+                createUser.getPhoneNumber(),
+                createUser.getPhoneNumber());
+        if (!userUtil.getInternalUserMap().containsKey(user.getUserName())) {
+            userUtil.getInternalUserMap().put(user.getUserName(), user);
+        }
+    }
+    public void addUserLocation(String userName, VisitedLocation visitedLocation) {
+        User user = findUserByName(userName);
+        user.getVisitedLocations().add(new VisitedLocation(user.getUserId(), visitedLocation.location, visitedLocation.timeVisited));
+        Map<String, User> userMap = userUtil.getInternalUserMap();
+        userMap.put(userName, user);
+        userUtil.setInternalUserMap(userMap);
+    }
+
+    public void addUserReward( String userName, UserReward userReward) {
+        User user = findUserByName(userName);
+        List<UserReward> userRewards = user.getUserRewards();
+        userRewards.add(userReward);
+        Map<String, User> userMap = userUtil.getInternalUserMap();
+        userMap.put(userName, user);
+        userUtil.setInternalUserMap(userMap);
+    }
+
+    public User findUserByName(String userName) {
         return userUtil.getInternalUserMap().get(userName);
     }
 
-    public Location getLocation(String userName) {
-        User user = findUserbyName(userName);
+    public Location getCurrentLocation(String userName) {
+        User user = findUserByName(userName);
         return user.getVisitedLocations().get(
-                user.getVisitedLocations().size()-1).location;
+                user.getVisitedLocations().size() - 1).location;
     }
+
     public List<VisitedLocation> getAllVisitedLocation(String userName) {
-        return findUserbyName(userName).getVisitedLocations();
+        return findUserByName(userName).getVisitedLocations();
+    }
+
+    public List<UserReward> getUserRewards(String userName) {
+        return findUserByName(userName).getUserRewards();
     }
 
     public List<UUID> getAllUsersID() {
@@ -57,7 +87,7 @@ public class UserService {
     }
 
     public TripPricerTask getTripPricerTask(String userName) {
-        UserPreferences userPreferences = findUserbyName(userName).getUserPreferences();
+        UserPreferences userPreferences = findUserByName(userName).getUserPreferences();
         return new TripPricerTask(
                 "randomAPIKey",
                 userPreferences.getNumberOfAdults(),
@@ -65,11 +95,10 @@ public class UserService {
                 userPreferences.getTripDuration());
     }
 
-    public int getUserRewards(String userName) {
-        int rewards =0;
-        for(UserReward userReward : findUserbyName(userName).getUserRewards()){
-            rewards += userReward.getRewardPoints();
-        }
-        return rewards;
+    public Integer getCumulateRewardPoints(String userName){
+        List<UserReward> userRewards = findUserByName(userName).getUserRewards();
+        return userRewards.stream().mapToInt(i -> i.getRewardPoints()).sum();
     }
+
+
 }

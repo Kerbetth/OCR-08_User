@@ -1,15 +1,14 @@
 package tourGuideUser.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import tourGuideUser.domain.CreateUser;
 import tourGuideUser.domain.pricerreward.TripPricerTask;
 import tourGuideUser.domain.trackerservice.Location;
 import tourGuideUser.domain.trackerservice.VisitedLocation;
 import tourGuideUser.domain.userservice.User;
 import tourGuideUser.domain.userservice.UserPreferences;
+import tourGuideUser.domain.userservice.UserReward;
 import tourGuideUser.service.UserService;
 
 import java.util.List;
@@ -20,40 +19,67 @@ public class UserController {
 
     @Autowired
     UserService userService;
+
     /**
      * createUser controller create a new user with all the UserPreferences
      */
 
     @PostMapping("/setUserPreferences")
-    public void setUserPreferences(@RequestParam String userName, UserPreferences userPreferences) {
+    public void setUserPreferences(@RequestParam String userName, @RequestBody UserPreferences userPreferences) {
         userService.setUserPreferences(userName, userPreferences);
     }
+
+    @PostMapping("/addUser")
+    public void addUser(@RequestBody CreateUser createUser) {
+        userService.addUser(createUser);
+    }
+
+    @PostMapping("/addUserLocation")
+    public void getAllVisitedLocations(@RequestParam String userName, @RequestBody VisitedLocation visitedLocation) {
+        userService.addUserLocation(userName, visitedLocation);
+    }
+
+    @PostMapping("/addUserReward")
+    public void addUserReward(@RequestParam String userName, @RequestBody UserReward userReward) {
+        userService.addUserReward(userName, userReward);
+    }
+
     @GetMapping("/getUser")
     public User getUser(@RequestParam String userName) {
-        return userService.findUserbyName(userName);
+        return userService.findUserByName(userName);
     }
+
     @GetMapping("/getUserId")
     public UUID getUserId(@RequestParam String userName) {
-        return userService.findUserbyName(userName).getUserId();
+        return userService.findUserByName(userName).getUserId();
     }
+
     @GetMapping("/getUserLocation")
     public Location getUserLocation(@RequestParam String userName) {
-        return userService.getLocation(userName);
+        return userService.getCurrentLocation(userName);
     }
+
     @GetMapping("/getAllUsersID")
     public List<UUID> getAllUsersID() {
-        return userService.getAllUsersID() ;
+        return userService.getAllUsersID();
     }
+
     @GetMapping("/getAllVisitedLocations")
     public List<VisitedLocation> getAllVisitedLocations(String userName) {
-        return userService.getAllVisitedLocation(userName);
-    }
+        return userService.getAllVisitedLocation(userName); }
+
     @GetMapping("/getTripPricerTask")
     public TripPricerTask getTripPricerTask(String userName) {
         return userService.getTripPricerTask(userName);
     }
+
     @GetMapping("/getUserRewards")
-    public int getUserRewards(String userName) {
+    public List<UserReward> getUserRewards(String userName) {
         return userService.getUserRewards(userName);
+    }
+
+    @GetMapping("/getCumulateRewardPoints")
+    public int getCumulateRewardPoints(String userName) {
+        return userService.getCumulateRewardPoints(userName);
     }
 }
