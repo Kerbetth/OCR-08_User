@@ -120,4 +120,7 @@ public class UserService {
     }
 
 
+    public void setInternalTestUser(Integer number) {
+        userUtil.changeNumberOfUsers(number);
+    }
 }

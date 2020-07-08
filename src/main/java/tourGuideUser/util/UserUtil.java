@@ -17,7 +17,6 @@ import java.util.stream.IntStream;
 public class UserUtil {
 
     private static int internalUserNumber = 100;
-    private static final String tripPricerApiKey = "test-server-api-key";
     private Map<String, User> internalUserMap = new HashMap<>();
 
     public static void setInternalUserNumber(int internalUserNumber) {
@@ -27,6 +26,20 @@ public class UserUtil {
 
     private UserUtil() {
         IntStream.range(0, internalUserNumber).forEach(i -> {
+            String userName = "internalUser" + i;
+            String phone = "000";
+            String email = userName + "@tourGuide.com";
+            User user = new User(UUID.randomUUID(), userName, phone, email);
+            user = generateUserLocationHistory(user);
+            internalUserMap.put(userName, user);
+        });
+
+        log.debug("Created " + internalUserNumber + " internal test users.");
+    }
+
+    public void changeNumberOfUsers(int number) {
+        internalUserMap.clear();
+        IntStream.range(0, number).forEach(i -> {
             String userName = "internalUser" + i;
             String phone = "000";
             String email = userName + "@tourGuide.com";

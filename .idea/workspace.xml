@@ -20,23 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c825401c-5b50-4219-afe9-ff0a376bc460" name="Default Changelist" comment="mise en place des test unitaire de la classe controller">
-      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/jacocoHtml/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-sessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/jacoco/test/jacocoTestReport.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/jacoco/test/jacocoTestReport.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tourGuideUser/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tourGuideUser/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tourGuideUser/integration/TrackerIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tourGuideUser/integration/TrackerIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tourGuideUser/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tourGuideUser/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tourGuideUser/util/UserUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tourGuideUser/util/UserUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,12 +68,12 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -107,16 +96,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../OCR-06/transferapps" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dufeu\eclipse-workspace\OCR-08\TourGuide_User\src\test\java\tourGuideUser" />
-      <recent name="C:\Users\dufeu\eclipse-workspace\OCR-08\TourGuide_User\TourGuide_User\src\main\java\tourGuideUser" />
-      <recent name="C:\Users\dufeu\eclipse-workspace\OCR-08\TourGuide_User\TourGuide_User\src\main\java\tourGuideUser\domain" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="tourGuideUser.unit" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="tourGuideUser.domain" />
@@ -124,8 +111,10 @@
       <recent name="tourGuideUser.domain.pricerreward" />
       <recent name="tourGuideUser.client" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="tourGuideUser.unit" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dufeu\eclipse-workspace\OCR-08\TourGuide_User\src\test\java\tourGuideUser" />
+      <recent name="C:\Users\dufeu\eclipse-workspace\OCR-08\TourGuide_User\TourGuide_User\src\main\java\tourGuideUser" />
+      <recent name="C:\Users\dufeu\eclipse-workspace\OCR-08\TourGuide_User\TourGuide_User\src\main\java\tourGuideUser\domain" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.Tests in 'tourGuideUser.test'">
@@ -470,10 +459,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="352" key="GridCell.Tab.2.right/0.0.1920.1050@0.0.1920.1050" timestamp="1591907473838" />
-    <state x="461" y="168" key="SettingsEditor" timestamp="1594159791952">
+    <state x="461" y="168" key="SettingsEditor" timestamp="1594223010510">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="461" y="168" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1594159791952" />
+    <state x="461" y="168" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1594223010510" />
     <state x="552" y="247" key="Vcs.Push.Dialog.v2" timestamp="1594207680763">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

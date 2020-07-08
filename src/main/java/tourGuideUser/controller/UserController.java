@@ -24,6 +24,11 @@ public class UserController {
      * createUser controller create a new user with all the UserPreferences
      */
 
+    @PostMapping("/setInternalTestUser")
+    public void setInternalTestUser(@RequestParam Integer number) {
+        userService.setInternalTestUser(number);
+    }
+
     @PostMapping("/setUserPreferences")
     public void setUserPreferences(@RequestParam String userName, @RequestBody SetUserPreferences userPreferences) {
         userService.setUserPreferences(userName, userPreferences);
