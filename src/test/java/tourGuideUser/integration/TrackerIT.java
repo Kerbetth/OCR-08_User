@@ -1,6 +1,5 @@
 package tourGuideUser.integration;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,6 +15,7 @@ import tourGuideUser.domain.userservice.User;
 import tourGuideUser.domain.userservice.UserReward;
 
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -30,78 +30,93 @@ public class TrackerIT {
     private DataTest dataTest = new DataTest();
 
     @Test
-    public void setUserPreferences() throws Exception {
+    public void setUserPreferences() {
         SetUserPreferences userPreferences = new SetUserPreferences(
                 20, "USD", 0, 1000, 2, 2, 2, 1
         );
-        userController.setUserPreferences("testUser1", userPreferences);
+        userController.setUserPreferences("internalUser1", userPreferences);
     }
 
     @Test
-    public void addUser() throws Exception {
-        CreateUser createUser = new CreateUser("newUser");
+    public void addUser() {
+        CreateUser createUser = new CreateUser("internalUser1b");
         userController.addUser(createUser);
-        User user =userController.getUser("newUser");
-        assertThat(user.getUserName()).isEqualTo("newUser");
+        User user = userController.getUser("internalUser1b");
+        assertThat(user.getUserName()).isEqualTo("internalUser1b");
     }
 
     @Test
-    public void addUserLocation() throws Exception {
+    public void addUserLocation() {
         VisitedLocation visitedLocation = new VisitedLocation(UUID.randomUUID(), new Location(1.0, 2.0), new Date());
-        ObjectMapper postMapper = new ObjectMapper();
-        String requestBody = null;
+        userController.addUserLocation("internalUser1", visitedLocation);
+        VisitedLocation visitedLocation1 = userController.getAllVisitedLocations("internalUser1").get(4);
+        assertThat(visitedLocation1.location.latitude).isEqualTo(1.0);
+        assertThat(visitedLocation1.location.longitude).isEqualTo(2.0);
 
     }
 
     @Test
-    public void addUserReward() throws Exception {
+    public void addUserReward() {
         UserReward userReward = new UserReward(
                 new VisitedLocation(UUID.randomUUID(),
                         new Location(1.0, 2.0),
                         new Date()),
                 new Attraction("attraction", "city", "state", 1.0, 2.0));
-        ObjectMapper postMapper = new ObjectMapper();
-        String requestBody = null;
-
+        userController.addUserReward("internalUser1", userReward);
+        UserReward userReward1 = userController.getUserRewards("internalUser1").get(0);
+        assertThat(userReward1.visitedLocation.location.latitude).isEqualTo(1.0);
+        assertThat(userReward1.visitedLocation.location.longitude).isEqualTo(2.0);
+        assertThat(userReward1.attraction.attractionName).isEqualTo("attraction");
     }
 
     @Test
-    public void getUser() throws Exception {
-
+    public void getUser() {
+        User user = userController.getUser("internalUser1");
+        assertThat(user.getUserName()).isEqualTo("internalUser1");
+        assertThat(user.getPhoneNumber()).isEqualTo("000");
     }
 
     @Test
-    public void getUserID() throws Exception {
-
+    public void getUserID(){
+        User user = userController.getUser("internalUser1");
+        UUID uuid = userController.getUserId("internalUser1");
+        assertThat(user.getUserId()).isEqualTo(uuid);
     }
 
     @Test
-    public void getUserLocation() throws Exception {
-
+    public void getUserLocation() {
+        Location location = userController.getUserLocation("internalUser1");
+        assertThat(location.longitude).isBetween(-180D, 180D);
+        assertThat(location.latitude).isBetween(-86D, 86D);
     }
 
     @Test
-    public void getAllUsersID() throws Exception {
-
+    public void getAllUsersID() {
+        List<UUID> uuids = userController.getAllUsersID();
+        assertThat(uuids).hasSize(100);
     }
 
     @Test
-    public void getAllVisitedLocations() throws Exception {
-
+    public void getAllVisitedLocations() {
+        List<UUID> uuids = userController.getAllUsersID();
+        assertThat(uuids).hasSize(100);
     }
 
     @Test
-    public void getTripPricerTask() throws Exception {
-
+    public void getTripPricerTask() {
+        List<UUID> uuids = userController.getAllUsersID();
+        assertThat(uuids).hasSize(100);
     }
 
     @Test
-    public void getUserRewards() throws Exception {
-
+    public void getUserRewards(){
+        List<UserReward> userRewards = userController.getUserRewards("internalUser1");
+        assertThat(userRewards).hasSize(0);
     }
 
     @Test
-    public void getCumulateRewardPoints() throws Exception {
-
+    public void getCumulateRewardPoints(){
+        int userRewards = userController.getCumulateRewardPoints("internalUser1");
+        assertThat(userRewards).isEqualTo(0);
     }
 }

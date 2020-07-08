@@ -35,7 +35,7 @@ public class UserController {
     }
 
     @PostMapping("/addUserLocation")
-    public void getAllVisitedLocations(@RequestParam String userName, @RequestBody VisitedLocation visitedLocation) {
+    public void addUserLocation(@RequestParam String userName, @RequestBody VisitedLocation visitedLocation) {
         userService.addUserLocation(userName, visitedLocation);
     }
 
