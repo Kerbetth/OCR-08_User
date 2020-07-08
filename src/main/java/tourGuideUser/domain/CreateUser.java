@@ -1,6 +1,7 @@
 package tourGuideUser.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,11 +9,12 @@ import lombok.Setter;
 @Getter
 @Setter
 public class CreateUser {
-	private final String userName;
-	private String phoneNumber;
-	private String emailAddress;
+    private final String userName;
+    private String phoneNumber;
+    private String emailAddress;
 
-	public CreateUser(String userName) {
-		this.userName = userName;
-	}
+    @JsonCreator
+    public CreateUser(String userName) {
+        this.userName = userName;
+    }
 }

@@ -1,6 +1,7 @@
 package tourGuideUser.domain.userservice;
 
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import tourGuideUser.domain.trackerservice.Attraction;
 import tourGuideUser.domain.trackerservice.VisitedLocation;
 
@@ -14,7 +15,7 @@ public class UserReward {
 		this.attraction = attraction;
 		this.rewardPoints = rewardPoints;
 	}
-	
+	@JsonCreator
 	public UserReward(VisitedLocation visitedLocation, Attraction attraction) {
 		this.visitedLocation = visitedLocation;
 		this.attraction = attraction;

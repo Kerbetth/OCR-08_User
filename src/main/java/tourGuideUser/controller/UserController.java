@@ -3,11 +3,11 @@ package tourGuideUser.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import tourGuideUser.domain.CreateUser;
+import tourGuideUser.domain.SetUserPreferences;
 import tourGuideUser.domain.pricerreward.TripPricerTask;
 import tourGuideUser.domain.trackerservice.Location;
 import tourGuideUser.domain.trackerservice.VisitedLocation;
 import tourGuideUser.domain.userservice.User;
-import tourGuideUser.domain.userservice.UserPreferences;
 import tourGuideUser.domain.userservice.UserReward;
 import tourGuideUser.service.UserService;
 
@@ -25,13 +25,13 @@ public class UserController {
      */
 
     @PostMapping("/setUserPreferences")
-    public void setUserPreferences(@RequestParam String userName, @RequestBody UserPreferences userPreferences) {
+    public void setUserPreferences(@RequestParam String userName, @RequestBody SetUserPreferences userPreferences) {
         userService.setUserPreferences(userName, userPreferences);
     }
 
     @PostMapping("/addUser")
-    public void addUser(@RequestBody CreateUser createUser) {
-        userService.addUser(createUser);
+    public void addUser(@RequestBody CreateUser userParam) {
+        userService.addUser(userParam);
     }
 
     @PostMapping("/addUserLocation")

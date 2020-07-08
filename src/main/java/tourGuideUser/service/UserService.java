@@ -2,9 +2,11 @@ package tourGuideUser.service;
 
 
 import lombok.extern.slf4j.Slf4j;
+import org.javamoney.moneta.Money;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tourGuideUser.domain.CreateUser;
+import tourGuideUser.domain.SetUserPreferences;
 import tourGuideUser.domain.pricerreward.TripPricerTask;
 import tourGuideUser.domain.trackerservice.Location;
 import tourGuideUser.domain.trackerservice.VisitedLocation;
@@ -13,7 +15,12 @@ import tourGuideUser.domain.userservice.UserPreferences;
 import tourGuideUser.domain.userservice.UserReward;
 import tourGuideUser.util.UserUtil;
 
-import java.util.*;
+import javax.money.CurrencyUnit;
+import javax.money.Monetary;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 @Slf4j
 @Service
@@ -24,8 +31,20 @@ public class UserService {
 
 
     public void setUserPreferences(String userName,
-                                   UserPreferences userPreferences) {
+                                   SetUserPreferences preferences) {
+        CurrencyUnit currencyUnit = Monetary.getCurrency(preferences.getCurrencyUnit());
         User user = findUserByName(userName);
+        UserPreferences userPreferences = new UserPreferences(
+                preferences.getAttractionProximity(),
+                currencyUnit,
+                Money.of(preferences.getLowerPricePoint(), currencyUnit),
+                Money.of(preferences.getLowerPricePoint(), currencyUnit),
+                preferences.getTripDuration(),
+                preferences.getTicketQuantity(),
+                preferences.getNumberOfAdults(),
+                preferences.getNumberOfChildren()
+        );
+
         user.setUserPreferences(userPreferences);
         Map<String, User> userMap = userUtil.getInternalUserMap();
         userMap.put(userName, user);

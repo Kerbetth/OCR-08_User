@@ -1,121 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="c825401c-5b50-4219-afe9-ff0a376bc460" name="Default Changelist" comment="mise en place des getUser, getAllUserID, et setUserpreferences">
-      <change afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.3/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.3/fileContent/fileContent.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.3/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/vcsWorkingDirs/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.settings/org.eclipse.buildship.core.prefs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/Application.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/client/dto/TrackerService/FiveNearestAttractions.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/client/dto/TrackerService/UserLocation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/client/dto/TrackerService/VisitedLocation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/client/dto/TrackerService/location/Attraction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/client/dto/TrackerService/location/Location.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/client/dto/UserRewardPricer/Provider.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/client/dto/UserRewardPricer/TripPricer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/client/dto/UserRewardPricer/TripPricerTask.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/repository/UserData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/branchfc.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/branchnc.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/branchpc.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/bundle.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/class.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/down.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/greenbar.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/group.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/method.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/package.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/prettify.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/prettify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/redbar.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/report.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/report.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/session.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/sort.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/sort.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/source.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/up.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-sessions.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.domain/FiveNearestAttractions.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.domain/FiveNearestAttractions.java.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.domain/UserLocation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.domain/UserLocation.java.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.domain/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.domain/index.source.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.helper/InternalTestHelper.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.helper/InternalTestHelper.java.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.helper/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.helper/index.source.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/RewardsService.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/RewardsService.java.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/TourGuideService$1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/TourGuideService.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/TourGuideService.java.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/index.source.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.tracker/Tracker.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.tracker/Tracker.java.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.tracker/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.tracker/index.source.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/User.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/User.java.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/UserPreferences.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/UserPreferences.java.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/UserReward.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/UserReward.java.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/index.source.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/Application.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/Application.java.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/TourGuideController.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/TourGuideController.java.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/TourGuideModule.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/TourGuideModule.java.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/index.source.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/jacocoTestReport.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.4.jar_982888894296538c98d7324f3ca78d8f/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.4.jar_982888894296538c98d7324f3ca78d8f/META-INF/maven/org.jacoco/org.jacoco.agent/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.4.jar_982888894296538c98d7324f3ca78d8f/META-INF/maven/org.jacoco/org.jacoco.agent/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.4.jar_982888894296538c98d7324f3ca78d8f/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.4.jar_982888894296538c98d7324f3ca78d8f/jacocoagent.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.4.jar_982888894296538c98d7324f3ca78d8f/org/jacoco/agent/AgentJar.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/tourGuideUser/domain/CreateUser.java" afterDir="false" />
+    <list default="true" id="c825401c-5b50-4219-afe9-ff0a376bc460" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/tourGuideUser/domain/SetUserPreferences.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tourGuideUser/DataTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tourGuideUser/integration/TrackerIT.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tourGuideUser/unit/TrackerControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tourGuideUser/unit/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/repository/UserData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/tourGuideUser/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/jacocoHtml/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/prettify.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/prettify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/report.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/report.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/sort.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-resources/sort.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/jacocoHtml/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.domain/FiveNearestAttractions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.domain/FiveNearestAttractions.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.domain/UserLocation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.domain/UserLocation.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.domain/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.domain/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.helper/InternalTestHelper.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.helper/InternalTestHelper.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.helper/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.helper/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/RewardsService.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/RewardsService.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/TourGuideService$1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/TourGuideService.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/TourGuideService.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.service/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.tracker/Tracker.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.tracker/Tracker.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.tracker/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.tracker/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/User.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/User.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/UserPreferences.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/UserPreferences.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/UserReward.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/UserReward.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide.user/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/Application.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/Application.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/TourGuideController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/TourGuideController.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/TourGuideModule.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/TourGuideModule.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jacocoHtml/tourGuide/index.source.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/jacoco/test/jacocoTestReport.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/jacoco/test/jacocoTestReport.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tourGuideUser/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tourGuideUser/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tourGuideUser/domain/userservice/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tourGuideUser/domain/userservice/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tourGuideUser/domain/CreateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tourGuideUser/domain/CreateUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tourGuideUser/domain/userservice/UserPreferences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tourGuideUser/domain/userservice/UserPreferences.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tourGuideUser/domain/userservice/UserReward.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tourGuideUser/domain/userservice/UserReward.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tourGuideUser/repository/UserData.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tourGuideUser/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tourGuideUser/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tourGuideUser/util/UserUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tourGuideUser/util/UserUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tourGuideUser/TestPerformance.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,9 +117,17 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="tourGuideUser" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -150,18 +142,23 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectId" id="1d8d1h3M7UgD5KmEz5HRwERqAtJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -172,34 +169,116 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../OCR-06/transferapps" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="tourGuideUser.domain.userservice" />
-      <recent name="tourGuideUser.domain.pricerreward" />
-      <recent name="tourGuideUser.domain" />
-      <recent name="tourGuideUser.client" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dufeu\eclipse-workspace\OCR-08\TourGuide_User\src\test\java\tourGuideUser" />
       <recent name="C:\Users\dufeu\eclipse-workspace\OCR-08\TourGuide_User\TourGuide_User\src\main\java\tourGuideUser" />
       <recent name="C:\Users\dufeu\eclipse-workspace\OCR-08\TourGuide_User\TourGuide_User\src\main\java\tourGuideUser\domain" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="tourGuideUser.domain" />
+      <recent name="tourGuideUser.domain.userservice" />
+      <recent name="tourGuideUser.domain.pricerreward" />
+      <recent name="tourGuideUser.client" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="tourGuideUser.unit" />
+    </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'TourGuide_User.tourGuideUser'">
-    <configuration name="Tests in 'TourGuide_User.tourGuideUser'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.TrackerIT.addUser">
+    <configuration name="Tests in 'tourGuideUser'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests *" />
+        <option name="scriptParameters" value="--tests &quot;tourGuideUser.*&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'tourGuideUser.unit'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;tourGuideUser.unit.*&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TrackerControllerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;tourGuideUser.unit.TrackerControllerTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TrackerIT.addUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;tourGuideUser.integration.TrackerIT.addUser&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="UserServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;tourGuideUser.unit.UserServiceTest&quot; --debug" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
             <option value=":test" />
           </list>
         </option>
@@ -235,23 +314,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Gradle.UserServiceTest" />
+      <item itemvalue="Gradle.Tests in 'tourGuideUser.unit'" />
+      <item itemvalue="Gradle.TrackerControllerTest" />
+      <item itemvalue="Gradle.Tests in 'tourGuideUser'" />
+      <item itemvalue="Gradle.TrackerIT.addUser" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Tests in 'TourGuide_User.tourGuideUser'" />
+        <item itemvalue="Gradle.TrackerIT.addUser" />
+        <item itemvalue="Gradle.Tests in 'tourGuideUser'" />
+        <item itemvalue="Gradle.TrackerControllerTest" />
+        <item itemvalue="Gradle.Tests in 'tourGuideUser.unit'" />
+        <item itemvalue="Gradle.UserServiceTest" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -282,6 +360,11 @@
       <workItem from="1593673066303" duration="5576000" />
       <workItem from="1593782553622" duration="8294000" />
       <workItem from="1593933148833" duration="4602000" />
+      <workItem from="1594019688421" duration="6433000" />
+      <workItem from="1594111285502" duration="90000" />
+      <workItem from="1594150409140" duration="656000" />
+      <workItem from="1594151312024" duration="512000" />
+      <workItem from="1594151830991" duration="1702000" />
     </task>
     <task id="LOCAL-00001" summary="mise en place des relations avec le MS TrackerClient">
       <created>1592496583503</created>
@@ -325,8 +408,18 @@
       <option name="project" value="LOCAL" />
       <updated>1593680215076</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="mise en place des controllers getUserReward, getUser, et addUser">
+      <created>1594019816118</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1594019816118</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2870000" />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -336,27 +429,30 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="mise en place des relations avec le MS TrackerClient" />
     <MESSAGE value="mise en place des getUser, getAllUserID, et setUserpreferences" />
     <MESSAGE value="Ajout du controller getUserLocation" />
     <MESSAGE value="ajout du controller getAttractionReward" />
     <MESSAGE value="mise en place du controller getRewards" />
-    <option name="LAST_COMMIT_MESSAGE" value="mise en place du controller getRewards" />
+    <MESSAGE value="mise en place des controllers getUserReward, getUser, et addUser" />
+    <option name="LAST_COMMIT_MESSAGE" value="mise en place des controllers getUserReward, getUser, et addUser" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="210" key="#com.intellij.ide.util.MemberChooser" timestamp="1592512988868">
+    <state x="765" y="210" key="#com.intellij.ide.util.MemberChooser" timestamp="1594204770854">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="765" y="210" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1592512988868" />
+    <state x="765" y="210" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1594204770854" />
     <state x="479" y="451" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1591811349667">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -369,30 +465,34 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="785" y="389" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1592762907561" />
-    <state x="376" y="53" key="CommitChangelistDialog2" timestamp="1593680213751">
+    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594155368988">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="376" y="53" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1593680213751" />
-    <state x="740" y="281" key="FileChooserDialogImpl" timestamp="1593683183125">
+    <state x="690" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1594155368988" />
+    <state x="376" y="53" key="CommitChangelistDialog2" timestamp="1594019815196">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="740" y="281" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1593683183125" />
-    <state width="1877" height="296" key="GridCell.Tab.0.bottom" timestamp="1593683761655">
+    <state x="376" y="53" key="CommitChangelistDialog2/0.0.1920.1050@0.0.1920.1050" timestamp="1594019815196" />
+    <state x="740" y="281" key="FileChooserDialogImpl" timestamp="1594206141907">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="296" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1593683761655" />
-    <state width="1877" height="296" key="GridCell.Tab.0.center" timestamp="1593683761655">
+    <state x="740" y="281" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1594206141907" />
+    <state width="1501" height="375" key="GridCell.Tab.0.bottom" timestamp="1594205786152">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="296" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1593683761655" />
-    <state width="1877" height="296" key="GridCell.Tab.0.left" timestamp="1593683761654">
+    <state width="1501" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1594205786152" />
+    <state width="1501" height="375" key="GridCell.Tab.0.center" timestamp="1594205786151">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="296" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1593683761654" />
-    <state width="1877" height="296" key="GridCell.Tab.0.right" timestamp="1593683761655">
+    <state width="1501" height="375" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1594205786151" />
+    <state width="1501" height="375" key="GridCell.Tab.0.left" timestamp="1594205786151">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="296" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1593683761655" />
+    <state width="1501" height="375" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1594205786151" />
+    <state width="1501" height="375" key="GridCell.Tab.0.right" timestamp="1594205786151">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1501" height="375" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1594205786151" />
     <state width="1877" height="296" key="GridCell.Tab.1.bottom" timestamp="1593683761655">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -425,18 +525,18 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="352" key="GridCell.Tab.2.right/0.0.1920.1050@0.0.1920.1050" timestamp="1591907473838" />
-    <state x="461" y="168" key="SettingsEditor" timestamp="1591895094096">
+    <state x="461" y="168" key="SettingsEditor" timestamp="1594159791952">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="461" y="168" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1591895094096" />
-    <state x="552" y="247" key="Vcs.Push.Dialog.v2" timestamp="1593680220487">
+    <state x="461" y="168" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1594159791952" />
+    <state x="552" y="247" key="Vcs.Push.Dialog.v2" timestamp="1594019822306">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="247" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1593680220487" />
-    <state x="656" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1594019689758">
+    <state x="552" y="247" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1594019822306" />
+    <state x="656" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1594111294065">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="656" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1594019689758" />
+    <state x="656" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1594111294065" />
     <state x="656" y="257" width="607" height="536" key="find.popup" timestamp="1593263248321">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
