@@ -83,8 +83,8 @@ public class UserController {
     }
 
     @GetMapping("/getUserRewardsId")
-    public List<String> getUserRewards(@RequestParam String userId) {
-        return userService.getUserRewardsId( userId);
+    public List<String> getAttractionIds(@RequestParam String userId) {
+        return userService.getAttractionIds( userId);
     }
 
     @GetMapping("/getCumulateRewardPoints")

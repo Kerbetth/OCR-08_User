@@ -92,7 +92,7 @@ public class UserService {
         return findUserByName(userName).getVisitedLocations();
     }
 
-    public List<String> getUserRewardsId(String uuid) {
+    public List<String> getAttractionIds(String uuid) {
         return userUtil.getInternalUserMap().get(UUID.fromString(uuid)).getUserRewards().stream().map(UserReward::getAttractionId)
                 .collect(Collectors.toList());
     }

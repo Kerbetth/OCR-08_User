@@ -56,16 +56,15 @@ public class TrackerIT {
 
     @Test
     public void addUserReward() {
+        Attraction attraction = new Attraction("attraction", "city", "state", 1.0, 2.0);
         UserReward userReward = new UserReward(
                 new VisitedLocation(UUID.randomUUID(),
                         new Location(1.0, 2.0),
                         new Date()),
-                new Attraction("attraction", "city", "state", 1.0, 2.0));
+                attraction);
         userController.addUserReward("internalUser1", userReward);
-        UserReward userReward1 = userController.getUserRewards("internalUser1").get(0);
-        assertThat(userReward1.visitedLocation.location.latitude).isEqualTo(1.0);
-        assertThat(userReward1.visitedLocation.location.longitude).isEqualTo(2.0);
-        assertThat(userReward1.attraction.attractionName).isEqualTo("attraction");
+        String attractionId = userController.getAttractionIds(userController.getAllUsersID().get(0).toString()).get(4);
+        assertThat(attractionId).isEqualTo(attraction.attractionId);
     }
 
     @Test
@@ -95,7 +94,7 @@ public class TrackerIT {
 
     @Test
     public void getUserRewards(){
-        List<UserReward> userRewards = userController.getUserRewards("internalUser1");
+        List<String> userRewards = userController.getAttractionIds("internalUser1");
         assertThat(userRewards).hasSize(0);
     }
 
