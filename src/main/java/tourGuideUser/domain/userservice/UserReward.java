@@ -28,5 +28,9 @@ public class UserReward {
 	public int getRewardPoints() {
 		return rewardPoints;
 	}
+
+	public String getAttractionId() {
+		return attraction.attractionId.toString();
+	}
 	
 }

@@ -1,6 +1,8 @@
 package tourGuideUser.util;
 
+
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Repository;
 import tourGuideUser.domain.trackerservice.Location;
 import tourGuideUser.domain.trackerservice.VisitedLocation;
@@ -16,25 +18,20 @@ import java.util.stream.IntStream;
 @Repository
 public class UserUtil {
 
-    private static int internalUserNumber = 100;
-    private Map<String, User> internalUserMap = new HashMap<>();
+    private Map<UUID, User> internalUserMap = new HashMap<>();
 
-    public static void setInternalUserNumber(int internalUserNumber) {
-        internalUserNumber = internalUserNumber;
-    }
-
-
-    private UserUtil() {
-        IntStream.range(0, internalUserNumber).forEach(i -> {
-            String userName = "internalUser" + i;
-            String phone = "000";
-            String email = userName + "@tourGuide.com";
-            User user = new User(UUID.randomUUID(), userName, phone, email);
-            user = generateUserLocationHistory(user);
-            internalUserMap.put(userName, user);
-        });
-
-        log.debug("Created " + internalUserNumber + " internal test users.");
+    private UserUtil(@Value("${testUserNumber}") int internalUserNumber, @Value("${testMode}") boolean testMode) {
+        if (testMode) {
+            IntStream.range(0, internalUserNumber).forEach(i -> {
+                String userName = "internalUser" + i;
+                String phone = "000";
+                String email = userName + "@tourGuide.com";
+                User user = new User(UUID.randomUUID(), userName, phone, email);
+                user = generateUserLocationHistory(user);
+                internalUserMap.put(user.getUserId(), user);
+            });
+            log.debug("Created " + internalUserNumber + " internal test users.");
+        }
     }
 
     public void changeNumberOfUsers(int number) {
@@ -45,16 +42,16 @@ public class UserUtil {
             String email = userName + "@tourGuide.com";
             User user = new User(UUID.randomUUID(), userName, phone, email);
             user = generateUserLocationHistory(user);
-            internalUserMap.put(userName, user);
+            internalUserMap.put(user.getUserId(), user);
         });
 
-        log.debug("Created " + internalUserNumber + " internal test users.");
+        log.debug("Created " + number + " internal test users.");
     }
 
-    public Map<String, User> getInternalUserMap() {
+    public Map<UUID, User> getInternalUserMap() {
         return internalUserMap;
     }
-    public void setInternalUserMap(Map<String, User> internalUserMap) {
+    public void setInternalUserMap(Map<UUID, User> internalUserMap) {
         this.internalUserMap = internalUserMap;
     }
 

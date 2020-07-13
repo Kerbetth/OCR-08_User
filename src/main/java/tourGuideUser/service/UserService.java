@@ -17,10 +17,8 @@ import tourGuideUser.util.UserUtil;
 
 import javax.money.CurrencyUnit;
 import javax.money.Monetary;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -46,8 +44,8 @@ public class UserService {
         );
 
         user.setUserPreferences(userPreferences);
-        Map<String, User> userMap = userUtil.getInternalUserMap();
-        userMap.put(userName, user);
+        Map<UUID, User> userMap = userUtil.getInternalUserMap();
+        userMap.put(user.getUserId(), user);
         userUtil.setInternalUserMap(userMap);
     }
 
@@ -58,23 +56,25 @@ public class UserService {
                 createUser.getPhoneNumber(),
                 createUser.getPhoneNumber());
         if (!userUtil.getInternalUserMap().containsKey(user.getUserName())) {
-            userUtil.getInternalUserMap().put(user.getUserName(), user);
+            userUtil.getInternalUserMap().put(user.getUserId(), user);
         }
     }
     public void addUserLocation(String userName, VisitedLocation visitedLocation) {
         User user = findUserByName(userName);
         user.getVisitedLocations().add(new VisitedLocation(user.getUserId(), visitedLocation.location, visitedLocation.timeVisited));
-        Map<String, User> userMap = userUtil.getInternalUserMap();
-        userMap.put(userName, user);
+        Map<UUID, User> userMap = userUtil.getInternalUserMap();
+        userMap.put(user.getUserId(), user);
         userUtil.setInternalUserMap(userMap);
     }
 
-    public void addUserReward( String userName, UserReward userReward) {
-        User user = findUserByName(userName);
+    public void addUserReward( String uuid, UserReward userReward) {
+        User user = userUtil.getInternalUserMap().values().stream().
+                filter(u -> Objects.equals(u.getUserId().toString(), uuid))
+                .findFirst().get();
         List<UserReward> userRewards = user.getUserRewards();
         userRewards.add(userReward);
-        Map<String, User> userMap = userUtil.getInternalUserMap();
-        userMap.put(userName, user);
+        Map<UUID, User> userMap = userUtil.getInternalUserMap();
+        userMap.put(user.getUserId(), user);
         userUtil.setInternalUserMap(userMap);
     }
 
@@ -92,8 +92,16 @@ public class UserService {
         return findUserByName(userName).getVisitedLocations();
     }
 
-    public List<UserReward> getUserRewards(String userName) {
-        return findUserByName(userName).getUserRewards();
+    public List<String> getUserRewardsId(String uuid) {
+        return userUtil.getInternalUserMap().get(UUID.fromString(uuid)).getUserRewards().stream().map(UserReward::getAttractionId)
+                .collect(Collectors.toList());
+    }
+
+    public List<String> getAllUsersName() {
+        List<String> userName = new ArrayList<>();
+        List<User> users = new ArrayList<>(userUtil.getInternalUserMap().values());
+        users.stream().forEach(user -> userName.add(user.getUserName()));
+        return userName;
     }
 
     public List<UUID> getAllUsersID() {
@@ -121,6 +129,9 @@ public class UserService {
 
 
     public void setInternalTestUser(Integer number) {
+        System.out.println(number+" testUser generated");
         userUtil.changeNumberOfUsers(number);
     }
+
+
 }

@@ -11,7 +11,6 @@ import tourGuideUser.domain.SetUserPreferences;
 import tourGuideUser.domain.trackerservice.Attraction;
 import tourGuideUser.domain.trackerservice.Location;
 import tourGuideUser.domain.trackerservice.VisitedLocation;
-import tourGuideUser.domain.userservice.User;
 import tourGuideUser.domain.userservice.UserReward;
 
 import java.util.Date;
@@ -41,8 +40,8 @@ public class TrackerIT {
     public void addUser() {
         CreateUser createUser = new CreateUser("internalUser1b");
         userController.addUser(createUser);
-        User user = userController.getUser("internalUser1b");
-        assertThat(user.getUserName()).isEqualTo("internalUser1b");
+        UUID user = userController.getUserId("internalUser1b");
+        assertThat(user).isNotNull();
     }
 
     @Test
@@ -67,20 +66,6 @@ public class TrackerIT {
         assertThat(userReward1.visitedLocation.location.latitude).isEqualTo(1.0);
         assertThat(userReward1.visitedLocation.location.longitude).isEqualTo(2.0);
         assertThat(userReward1.attraction.attractionName).isEqualTo("attraction");
-    }
-
-    @Test
-    public void getUser() {
-        User user = userController.getUser("internalUser1");
-        assertThat(user.getUserName()).isEqualTo("internalUser1");
-        assertThat(user.getPhoneNumber()).isEqualTo("000");
-    }
-
-    @Test
-    public void getUserID(){
-        User user = userController.getUser("internalUser1");
-        UUID uuid = userController.getUserId("internalUser1");
-        assertThat(user.getUserId()).isEqualTo(uuid);
     }
 
     @Test
