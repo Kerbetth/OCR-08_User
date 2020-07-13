@@ -59,18 +59,16 @@ public class UserService {
             userUtil.getInternalUserMap().put(user.getUserId(), user);
         }
     }
-    public void addUserLocation(String userName, VisitedLocation visitedLocation) {
-        User user = findUserByName(userName);
+    public void addUserLocation(String uuid, VisitedLocation visitedLocation) {
+        User user = userUtil.getInternalUserMap().get(UUID.fromString(uuid));
         user.getVisitedLocations().add(new VisitedLocation(user.getUserId(), visitedLocation.location, visitedLocation.timeVisited));
         Map<UUID, User> userMap = userUtil.getInternalUserMap();
         userMap.put(user.getUserId(), user);
         userUtil.setInternalUserMap(userMap);
     }
 
-    public void addUserReward( String uuid, UserReward userReward) {
-        User user = userUtil.getInternalUserMap().values().stream().
-                filter(u -> Objects.equals(u.getUserId().toString(), uuid))
-                .findFirst().get();
+    public void addUserReward(String uuid, UserReward userReward) {
+        User user = userUtil.getInternalUserMap().get(UUID.fromString(uuid));
         List<UserReward> userRewards = user.getUserRewards();
         userRewards.add(userReward);
         Map<UUID, User> userMap = userUtil.getInternalUserMap();
@@ -122,8 +120,8 @@ public class UserService {
                 userPreferences.getTripDuration());
     }
 
-    public Integer getCumulateRewardPoints(String userName){
-        List<UserReward> userRewards = findUserByName(userName).getUserRewards();
+    public Integer getCumulateRewardPoints(String userId){
+        List<UserReward> userRewards = userUtil.getInternalUserMap().get(UUID.fromString(userId)).getUserRewards();
         return userRewards.stream().mapToInt(i -> i.getRewardPoints()).sum();
     }
 
@@ -134,4 +132,7 @@ public class UserService {
     }
 
 
+    public int getUserRewardSize(String userId) {
+        return userUtil.getInternalUserMap().get(UUID.fromString(userId)).getUserRewards().size();
+    }
 }

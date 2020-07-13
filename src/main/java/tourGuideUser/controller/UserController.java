@@ -39,8 +39,8 @@ public class UserController {
     }
 
     @PostMapping("/addUserLocation")
-    public void addUserLocation(@RequestParam String userName, @RequestBody VisitedLocation visitedLocation) {
-        userService.addUserLocation(userName, visitedLocation);
+    public void addUserLocation(@RequestParam String userId, @RequestBody VisitedLocation visitedLocation) {
+        userService.addUserLocation(userId, visitedLocation);
     }
 
     @PostMapping("/addUserReward")
@@ -87,8 +87,13 @@ public class UserController {
         return userService.getAttractionIds( userId);
     }
 
+    @GetMapping("/getUserRewardSize")
+    public int getUserRewardSize(@RequestParam String userId) {
+        return userService.getUserRewardSize( userId);
+    }
+
     @GetMapping("/getCumulateRewardPoints")
-    public int getCumulateRewardPoints(@RequestParam String userName) {
-        return userService.getCumulateRewardPoints(userName);
+    public int getCumulateRewardPoints(@RequestParam String userId) {
+        return userService.getCumulateRewardPoints(userId);
     }
 }
