@@ -82,7 +82,7 @@ public class UserController {
         return userService.getTripPricerTask(userName);
     }
 
-    @GetMapping("/getUserRewardsId")
+    @GetMapping("/getAttractionIds")
     public List<String> getAttractionIds(@RequestParam String userId) {
         return userService.getAttractionIds( userId);
     }

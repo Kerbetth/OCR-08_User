@@ -51,7 +51,6 @@ public class TrackerIT {
         VisitedLocation visitedLocation1 = userController.getAllVisitedLocations("internalUser1").get(4);
         assertThat(visitedLocation1.location.latitude).isEqualTo(1.0);
         assertThat(visitedLocation1.location.longitude).isEqualTo(2.0);
-
     }
 
     @Test

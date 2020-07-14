@@ -60,11 +60,9 @@ public class UserService {
         }
     }
     public void addUserLocation(String uuid, VisitedLocation visitedLocation) {
-        User user = userUtil.getInternalUserMap().get(UUID.fromString(uuid));
-        user.getVisitedLocations().add(new VisitedLocation(user.getUserId(), visitedLocation.location, visitedLocation.timeVisited));
-        Map<UUID, User> userMap = userUtil.getInternalUserMap();
-        userMap.put(user.getUserId(), user);
-        userUtil.setInternalUserMap(userMap);
+        userUtil.getInternalUserMap().get(UUID.fromString(uuid))
+                .getVisitedLocations()
+                .add(new VisitedLocation(UUID.fromString(uuid), visitedLocation.location, visitedLocation.timeVisited));
     }
 
     public void addUserReward(String uuid, UserReward userReward) {
