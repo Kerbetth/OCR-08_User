@@ -42,3 +42,4 @@ build/
 /.settings/
 /build/
 /gradle/
+/.idea/
