@@ -13,9 +13,9 @@ import java.util.stream.IntStream;
 @Slf4j
 public class DataTest {
 
-    private final Map<String, User> internalUserMap = new HashMap<>();
+    private final Map<UUID, User> internalUserMap = new HashMap<>();
 
-    public Map<String, User> getInternalUserMap() {
+    public Map<UUID, User> getInternalUserMap() {
         return internalUserMap;
     }
     public void initializeInternalUsers() {
@@ -26,7 +26,7 @@ public class DataTest {
             User user = new User(UUID.randomUUID(), userName, phone, email);
             generateUserLocationHistory(user);
 
-            internalUserMap.put(userName, user);
+            internalUserMap.put(user.getUserId(), user);
         });
         log.debug("Created 10 internal test users.");
     }
