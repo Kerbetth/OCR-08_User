@@ -1,56 +1,123 @@
 package tourGuideUser.service;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+
 import lombok.extern.slf4j.Slf4j;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.javamoney.moneta.Money;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import tourGuideUser.client.dto.TrackerService.VisitedLocation;
-import tourGuideUser.client.dto.TrackerService.location.Location;
-import tourGuideUser.domain.User;
-import tourGuideUser.domain.UserPreferences;
-import tourGuideUser.repository.UserData;
+import tourGuideUser.domain.CreateUser;
+import tourGuideUser.domain.SetUserPreferences;
+import tourGuideUser.domain.pricerreward.TripPricerTask;
+import tourGuideUser.domain.trackerservice.Location;
+import tourGuideUser.domain.trackerservice.VisitedLocation;
+import tourGuideUser.domain.userservice.User;
+import tourGuideUser.domain.userservice.UserPreferences;
+import tourGuideUser.domain.userservice.UserReward;
+import tourGuideUser.util.UserUtil;
 
 import javax.money.CurrencyUnit;
-import java.io.FileReader;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.time.LocalDateTime;
-import java.time.ZoneOffset;
-import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+import javax.money.Monetary;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 @Slf4j
 @Service
 public class UserService {
 
     @Autowired
-    UserData userData;
+    UserUtil userUtil;
 
-
-    public void saveUser(User user) {
-        userData.addANewUser(user);
-    }
 
     public void setUserPreferences(String userName,
-                                   UserPreferences userPreferences) {
-        User user = findUserbyName(userName);
+                                   SetUserPreferences preferences) {
+        CurrencyUnit currencyUnit = Monetary.getCurrency(preferences.getCurrencyUnit());
+        User user = findUserByName(userName);
+        UserPreferences userPreferences = new UserPreferences(
+                preferences.getAttractionProximity(),
+                currencyUnit,
+                Money.of(preferences.getLowerPricePoint(), currencyUnit),
+                Money.of(preferences.getLowerPricePoint(), currencyUnit),
+                preferences.getTripDuration(),
+                preferences.getTicketQuantity(),
+                preferences.getNumberOfAdults(),
+                preferences.getNumberOfChildren()
+        );
+
         user.setUserPreferences(userPreferences);
-        saveUser(user);
+        Map<String, User> userMap = userUtil.getInternalUserMap();
+        userMap.put(userName, user);
+        userUtil.setInternalUserMap(userMap);
     }
 
-    public User findUserbyName(String userName) {
-        return userData.findUserbyName(userName);
+    public void addUser(CreateUser createUser) {
+        User user =new User(
+                UUID.randomUUID(),
+                createUser.getUserName(),
+                createUser.getPhoneNumber(),
+                createUser.getPhoneNumber());
+        if (!userUtil.getInternalUserMap().containsKey(user.getUserName())) {
+            userUtil.getInternalUserMap().put(user.getUserName(), user);
+        }
+    }
+    public void addUserLocation(String userName, VisitedLocation visitedLocation) {
+        User user = findUserByName(userName);
+        user.getVisitedLocations().add(new VisitedLocation(user.getUserId(), visitedLocation.location, visitedLocation.timeVisited));
+        Map<String, User> userMap = userUtil.getInternalUserMap();
+        userMap.put(userName, user);
+        userUtil.setInternalUserMap(userMap);
     }
 
-    public List<User> collectAllUsers() {
-        return userData.collectAllUsers();
+    public void addUserReward( String userName, UserReward userReward) {
+        User user = findUserByName(userName);
+        List<UserReward> userRewards = user.getUserRewards();
+        userRewards.add(userReward);
+        Map<String, User> userMap = userUtil.getInternalUserMap();
+        userMap.put(userName, user);
+        userUtil.setInternalUserMap(userMap);
     }
+
+    public User findUserByName(String userName) {
+        return userUtil.getInternalUserMap().get(userName);
+    }
+
+    public Location getCurrentLocation(String userName) {
+        User user = findUserByName(userName);
+        return user.getVisitedLocations().get(
+                user.getVisitedLocations().size() - 1).location;
+    }
+
+    public List<VisitedLocation> getAllVisitedLocation(String userName) {
+        return findUserByName(userName).getVisitedLocations();
+    }
+
+    public List<UserReward> getUserRewards(String userName) {
+        return findUserByName(userName).getUserRewards();
+    }
+
+    public List<UUID> getAllUsersID() {
+        List<UUID> userId = new ArrayList<>();
+        List<User> users = new ArrayList<>(userUtil.getInternalUserMap().values());
+        for (User user : users) {
+            userId.add(user.getUserId());
+        }
+        return userId;
+    }
+
+    public TripPricerTask getTripPricerTask(String userName) {
+        UserPreferences userPreferences = findUserByName(userName).getUserPreferences();
+        return new TripPricerTask(
+                "randomAPIKey",
+                userPreferences.getNumberOfAdults(),
+                userPreferences.getNumberOfChildren(),
+                userPreferences.getTripDuration());
+    }
+
+    public Integer getCumulateRewardPoints(String userName){
+        List<UserReward> userRewards = findUserByName(userName).getUserRewards();
+        return userRewards.stream().mapToInt(i -> i.getRewardPoints()).sum();
+    }
+
 
 }
