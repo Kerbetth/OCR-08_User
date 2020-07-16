@@ -1,5 +1,6 @@
 package tourGuideUser.integration;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,15 +19,22 @@ import java.util.List;
 import java.util.UUID;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.ArgumentMatchers.anyString;
 
 @SpringBootTest
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
-public class TrackerIT {
+public class UserIT {
 
     @Autowired
     UserController userController;
 
     private DataTest dataTest = new DataTest();
+    UUID userId;
+
+    @BeforeEach
+    void setup() {
+        userId = userController.getAllUsersID().get(0);
+    }
 
     @Test
     public void setUserPreferences() {
@@ -47,8 +55,8 @@ public class TrackerIT {
     @Test
     public void addUserLocation() {
         VisitedLocation visitedLocation = new VisitedLocation(UUID.randomUUID(), new Location(1.0, 2.0), new Date());
-        userController.addUserLocation("internalUser1", visitedLocation);
-        VisitedLocation visitedLocation1 = userController.getAllVisitedLocations("internalUser1").get(4);
+        userController.addUserLocation(userId.toString(), visitedLocation);
+        VisitedLocation visitedLocation1 = userController.getAllVisitedLocations(userId.toString()).get(4);
         assertThat(visitedLocation1.location.latitude).isEqualTo(1.0);
         assertThat(visitedLocation1.location.longitude).isEqualTo(2.0);
     }
@@ -61,13 +69,14 @@ public class TrackerIT {
                         new Location(1.0, 2.0),
                         new Date()),
                 attraction);
-        userController.addUserReward("internalUser1", userReward);
-        String attractionId = userController.getAttractionIds(userController.getAllUsersID().get(0).toString()).get(4);
-        assertThat(attractionId).isEqualTo(attraction.attractionId);
+        userController.addUserReward(userId.toString(), userReward);
+        String attractionId = userController.getAttractionIds(userController.getAllUsersID().get(0).toString()).get(0);
+        assertThat(attractionId).isEqualTo(attraction.attractionId.toString());
     }
 
     @Test
     public void getUserLocation() {
+
         Location location = userController.getUserLocation("internalUser1");
         assertThat(location.longitude).isBetween(-180D, 180D);
         assertThat(location.latitude).isBetween(-86D, 86D);
@@ -92,14 +101,14 @@ public class TrackerIT {
     }
 
     @Test
-    public void getUserRewards(){
-        List<String> userRewards = userController.getAttractionIds("internalUser1");
+    public void getUserRewards() {
+        List<String> userRewards = userController.getAttractionIds(userId.toString());
         assertThat(userRewards).hasSize(0);
     }
 
     @Test
-    public void getCumulateRewardPoints(){
-        int userRewards = userController.getCumulateRewardPoints("internalUser1");
+    public void getCumulateRewardPoints() {
+        int userRewards = userController.getCumulateRewardPoints(userId.toString());
         assertThat(userRewards).isEqualTo(0);
     }
 }

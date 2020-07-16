@@ -25,7 +25,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest
-public class TrackerControllerTest {
+public class UserControllerTest {
 
     @MockBean
     private UserController trackerController;
@@ -85,7 +85,7 @@ public class TrackerControllerTest {
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-        this.mockMvc.perform(post("/addUserLocation?userName=testUser1")
+        this.mockMvc.perform(post("/addUserLocation?userId=anything")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(requestBody)
         )
@@ -107,17 +107,9 @@ public class TrackerControllerTest {
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-        this.mockMvc.perform(post("/addUserReward?userName=testUser1")
+        this.mockMvc.perform(post("/addUserReward?userId=anything")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(requestBody)
-        )
-                .andExpect(status().isOk());
-    }
-
-    @Test
-    public void getUser() throws Exception {
-        this.mockMvc.perform(get("/getUser?userName=testUser1" )
-                .contentType(MediaType.APPLICATION_JSON)
         )
                 .andExpect(status().isOk());
     }
@@ -147,7 +139,7 @@ public class TrackerControllerTest {
     }
     @Test
     public void getAllVisitedLocations() throws Exception {
-        this.mockMvc.perform(get("/getAllVisitedLocations?userName=testUser1" )
+        this.mockMvc.perform(get("/getAllVisitedLocations?userId=testUser1" )
                 .contentType(MediaType.APPLICATION_JSON)
         )
                 .andExpect(status().isOk());
@@ -163,7 +155,7 @@ public class TrackerControllerTest {
 
     @Test
     public void getUserRewards() throws Exception {
-        this.mockMvc.perform(get("/getUserRewards?userName=testUser1" )
+        this.mockMvc.perform(get("/getUserRewardSize?userId=anything" )
                 .contentType(MediaType.APPLICATION_JSON)
         )
                 .andExpect(status().isOk());
@@ -171,7 +163,7 @@ public class TrackerControllerTest {
 
     @Test
     public void getCumulateRewardPoints() throws Exception {
-        this.mockMvc.perform(get("/getCumulateRewardPoints?userName=testUser1" )
+        this.mockMvc.perform(get("/getCumulateRewardPoints?userId=anything" )
                 .contentType(MediaType.APPLICATION_JSON)
         )
                 .andExpect(status().isOk());
