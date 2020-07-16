@@ -47,11 +47,6 @@ public class UserController {
     public void addUserReward(@RequestParam String userId, @RequestBody UserReward userReward) {
         userService.addUserReward(userId, userReward);
     }
-/*
-    @GetMapping("/getUser")
-    public User getUser(@RequestParam String userName) {
-        return userService.findUserByName(userName);
-    }*/
 
     @GetMapping("/getUserId")
     public UUID getUserId(@RequestParam String userName) {
@@ -74,8 +69,8 @@ public class UserController {
     }
 
     @GetMapping("/getAllVisitedLocations")
-    public List<VisitedLocation> getAllVisitedLocations(@RequestParam String userName) {
-        return userService.getAllVisitedLocation(userName); }
+    public List<VisitedLocation> getAllVisitedLocations(@RequestParam String userId) {
+        return userService.getAllVisitedLocation(userId); }
 
     @GetMapping("/getTripPricerTask")
     public TripPricerTask getTripPricerTask(@RequestParam String userName) {

@@ -63,6 +63,7 @@ public class UserService {
         userUtil.getInternalUserMap().get(UUID.fromString(uuid))
                 .getVisitedLocations()
                 .add(new VisitedLocation(UUID.fromString(uuid), visitedLocation.location, visitedLocation.timeVisited));
+        log.info(userUtil.getInternalUserMap().get(UUID.fromString(uuid)).getUserName());
     }
 
     public void addUserReward(String uuid, UserReward userReward) {
@@ -75,7 +76,7 @@ public class UserService {
     }
 
     public User findUserByName(String userName) {
-        return userUtil.getInternalUserMap().get(userName);
+        return userUtil.getInternalUserMap().values().stream().filter(user -> user.getUserName().equals(userName)).findFirst().get();
     }
 
     public Location getCurrentLocation(String userName) {
@@ -84,8 +85,8 @@ public class UserService {
                 user.getVisitedLocations().size() - 1).location;
     }
 
-    public List<VisitedLocation> getAllVisitedLocation(String userName) {
-        return findUserByName(userName).getVisitedLocations();
+    public List<VisitedLocation> getAllVisitedLocation(String userId) {
+        return userUtil.getInternalUserMap().get(UUID.fromString(userId)).getVisitedLocations();
     }
 
     public List<String> getAttractionIds(String uuid) {
